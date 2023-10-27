@@ -26,6 +26,9 @@ class CreateCustomersTable extends Migration
             $table->string("company");
             $table->string("gstin");
             $table->integer("status");
+            $table->integer("is_verify");
+            $table->integer("is_forgot_password");
+            $table->integer("rand_id");
             $table->timestamps();
         });
     }

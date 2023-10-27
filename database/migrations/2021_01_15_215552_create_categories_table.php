@@ -17,6 +17,10 @@ class CreateCategoriesTable extends Migration
             $table->id();
             $table->string('category_name');
             $table->string('category_slug');
+            $table->integer('parent_category_id');
+            $table->string('category_image');
+            $table->integer('is_home')->default=(0);
+            $table->integer('status')->default=(0);
             $table->timestamps();
         });
     }

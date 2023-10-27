@@ -17,6 +17,8 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->integer('category_id');
             $table->string('name');
+            $table->string('image');
+            $table->string('slug');
             $table->string('brand');
             $table->string('model');
             $table->longText('short_desc');
@@ -25,6 +27,12 @@ class CreateProductsTable extends Migration
             $table->longText('technical_specification');
             $table->longText('uses');
             $table->longText('warranty');
+            $table->integer('lead_time');
+            $table->integer('tax_id');
+            $table->integer('is_promo');
+            $table->integer('is_featured');
+            $table->integer('is_discounted');
+            $table->integer('is_tranding');
             $table->integer('status');
             $table->timestamps();
         });
